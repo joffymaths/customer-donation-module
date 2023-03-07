@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Joffy_CustomerDonation::customerdonation" title="Customer Donation" module="Joffy_CustomerDonation" sortOrder="50" resource="Joffy_CustomerDonation::customerdonation" parent="Magento_Backend::marketing"/>
+        <add id="Joffy_CustomerDonation::settings" title="Settings" module="Joffy_CustomerDonation" sortOrder="20" action="adminhtml/system_config/edit/section/donation_settings" resource="Joffy_CustomerDonation::settings" parent="Joffy_CustomerDonation::customerdonation"/>
+    </menu>
+</config>

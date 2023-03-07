@@ -1,0 +1,56 @@
+<style>
+	.donation-warpper{
+		width: 100%;
+	}
+	.donation-details{
+		width: 100%;
+		display: inline-flex;
+	}
+	.donation-active{
+		width: 50%;
+	}
+	.donation-amount{
+		width: 50%;
+	}
+
+</style>
+<div class="donation-warpper">
+	<p> Donate for Store</p>
+	<div class="donation-details">
+		<div class="donation-active">
+			<input type="checkbox" id="donation_active" name="donation_active"  />
+			<input type="hidden" id="donation_active_value" name="donation_active_value"  />
+    		<label for="coding">Donation Amount</label> 
+    	</div>
+    	<div class="donation-amount">
+			<select name="donation_customer_amount" id="donation_customer_amount">
+				<option value="0">Donation Amount</option>
+				<option value="5">5</option>
+				<option value="10">10</option>
+				<option value="50">50</option>
+			</select>
+	    </div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	require([
+	'jquery'
+	], function ($) {
+		$("#donation_customer_amount").prop('selectedIndex', 0);
+		$('#donation_customer_amount option:not(:selected)').attr('disabled', true);
+		$('#donation_active_value').val(0);
+		$("#donation_active").click(function() {
+		    if($(this).is(":checked")) {
+		    	$('#donation_active_value').val(1);
+		        $('#donation_customer_amount option:not(:selected)').attr('disabled', false);
+		    } else {
+		    	$('#donation_active_value').val(0);
+		    	$("#donation_customer_amount").prop('selectedIndex', 0);
+		        $('#donation_customer_amount option:not(:selected)').attr('disabled', true);
+		    }
+		});
+
+	});
+
+</script>
