@@ -1,5 +1,5 @@
 {
-  "name": "joffy/customer-donation-module",
+  "name": "joffymaths/customer-donation-module",
   "description": "It is a Customer donation Module from product Details page",
   "require": {
     "php": "~7.4.0|~8.1.0"
